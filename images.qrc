@@ -1,0 +1,6 @@
+<RCC>
+  <qresource>
+    <file>img/setting.png</file>
+    <file>img/barcode.png</file>
+  </qresource>
+</RCC>

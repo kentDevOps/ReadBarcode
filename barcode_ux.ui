@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>747</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="headFr">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>10</y>
+      <width>1181</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#headFr
+{
+	background-color:#020617;
+	border-bottom: 4px solid #1c64f2;
+	border-radius: 8px; /* Bo tròn đều 20px */
+}
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Shadow::Raised</enum>
+    </property>
+    <widget class="QLabel" name="headFr_lbIcon">
+     <property name="geometry">
+      <rect>
+       <x>23</x>
+       <y>7</y>
+       <width>71</width>
+       <height>63</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#headFr_lbIcon
+{
+	background-color:#9CA3AF;
+    border-image: url(:/img/barcode.png) 0 0 0 0 stretch stretch;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="headFr_lbTitle">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>6</y>
+       <width>371</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#headFr_lbTitle
+{
+	color: #FFFFFF;              /* Màu trắng */
+    font-family: &quot;Segoe UI&quot;, sans-serif; /* Font không chân hiện đại */
+    font-weight: 900;            /* Độ dày tối đa */
+    font-style: italic;          /* Chữ nghiêng */
+    font-size: 24px;             /* Kích thước chữ */
+    letter-spacing: 1px;         /* Khoảng cách giữa các chữ */
+}</string>
+     </property>
+     <property name="text">
+      <string>LABEL BARCODE INSPECTOR</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="headFr_lbSubT">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>40</y>
+       <width>371</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#headFr_lbSubT
+{
+	color: #FFFFFF;              /* Màu trắng */
+    font-family: &quot;Segoe UI&quot;, sans-serif; /* Font không chân hiện đại */
+    font-weight: 900;            /* Độ dày tối đa */
+    font-style: normal;          /* Chữ nghiêng */
+    font-size: 11px;             /* Kích thước chữ */
+    letter-spacing: 1px;         /* Khoảng cách giữa các chữ */
+}</string>
+     </property>
+     <property name="text">
+      <string>Read barcode and Inspect them for Label Approval</string>
+     </property>
+    </widget>
+    <widget class="QFrame" name="frTong">
+     <property name="geometry">
+      <rect>
+       <x>850</x>
+       <y>10</y>
+       <width>82</width>
+       <height>62</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#frTong
+ {
+    background-color: #1a1f2b; /* Màu nền tối xanh nhẹ */
+    border: 1px solid #2d3748; /* Viền mờ để tạo khối */
+    border-radius: 8px;
+    min-width: 80px;
+    max-width: 100px;
+    min-height: 60px;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Shape::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Shadow::Raised</enum>
+     </property>
+     <widget class="QLabel" name="frTong_total">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>61</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#frTong_total
+{
+	text-align: center;	
+	color:#404040;
+	font-size:16px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Total</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="frTong_total_value">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>32</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#frTong_total_value
+{
+	text-align: center;	
+	color:#404040;
+	font-size:22px;
+}</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QFrame" name="frPass">
+     <property name="geometry">
+      <rect>
+       <x>960</x>
+       <y>10</y>
+       <width>82</width>
+       <height>62</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#frPass
+ {
+    background-color: #1a1f2b; /* Màu nền tối xanh nhẹ */
+    border: 1px solid #2d3748; /* Viền mờ để tạo khối */
+    border-radius: 8px;
+    min-width: 80px;
+    max-width: 100px;
+    min-height: 60px;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Shape::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Shadow::Raised</enum>
+     </property>
+     <widget class="QLabel" name="frPass_vl">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#frPass_vl
+{
+	text-align: center;	
+	color:#22C55E;
+	font-size:22px;
+}</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="frPass_lb">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>8</y>
+        <width>61</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#frPass_lb
+{
+	text-align: center;	
+	color:#22C55E;
+	font-size:16px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Total</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QFrame" name="frFail">
+     <property name="geometry">
+      <rect>
+       <x>1070</x>
+       <y>10</y>
+       <width>82</width>
+       <height>62</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#frFail
+ {
+    background-color: #1a1f2b; /* Màu nền tối xanh nhẹ */
+    border: 1px solid #2d3748; /* Viền mờ để tạo khối */
+    border-radius: 8px;
+    min-width: 80px;
+    max-width: 100px;
+    min-height: 60px;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Shape::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Shadow::Raised</enum>
+     </property>
+     <widget class="QLabel" name="frFail_vl">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>30</y>
+        <width>61</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#frFail_vl
+{
+	text-align: center;	
+	color:#EF4444;
+	font-size:22px;
+}</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="frFail_lb">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>8</y>
+        <width>61</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>-1</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#frFail_lb
+{
+	text-align: center;	
+	color:#EF4444;
+	font-size:16px;
+}</string>
+      </property>
+      <property name="text">
+       <string>Total</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="footFr">
+    <property name="geometry">
+     <rect>
+      <x>8</x>
+      <y>674</y>
+      <width>1186</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#footFr
+{
+	background-color:#020617;
+	border-top: 4px solid #1c64f2;
+	border-radius: 10px; /* Bo tròn đều 20px */
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Shadow::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QFrame" name="configFr">
+    <property name="geometry">
+     <rect>
+      <x>7</x>
+      <y>100</y>
+      <width>291</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#configFr
+{
+	background-color:#CBD5E1;
+	border-radius: 8px; /* Bo tròn đều 20px */
+}</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Shadow::Raised</enum>
+    </property>
+    <widget class="QLabel" name="configFr_head">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>1</y>
+       <width>291</width>
+       <height>35</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#configFr_head
+{
+	background-color:#020617;
+	/*border-radius: 8px 8px 0 0; /* Bo tròn đều 20px */
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="configFr_icon">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>21</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#configFr_icon
+{
+	background-color:#020617;
+    border-image: url(:/img/setting.png) 0 0 0 0 stretch stretch;
+}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="configFr_title">
+     <property name="geometry">
+      <rect>
+       <x>36</x>
+       <y>8</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#configFr_title
+{
+	color: #FFFFFF;              /* Màu trắng */
+    font-family: &quot;Segoe UI&quot;, sans-serif; /* Font không chân hiện đại */
+    font-weight: 900;            /* Độ dày tối đa */
+    font-style: normal;          /* Chữ nghiêng */
+    font-size: 13px;             /* Kích thước chữ */
+    letter-spacing: 1px;         /* Khoảng cách giữa các chữ */
+}</string>
+     </property>
+     <property name="text">
+      <string>Configuration</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="configFr_project_lb">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>39</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#configFr_project_lb
+{
+	color: #5D677E;              /* Màu trắng */
+    font-family: &quot;Segoe UI&quot;, sans-serif; /* Font không chân hiện đại */
+    font-weight: 900;            /* Độ dày tối đa */
+    font-style: normal;          /* Chữ nghiêng */
+    font-size: 13px;             /* Kích thước chữ */
+    letter-spacing: 1px;         /* Khoảng cách giữa các chữ */
+}</string>
+     </property>
+     <property name="text">
+      <string>Project ID</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="configFr_prj_list">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>64</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="configFr_line_lb">
+     <property name="geometry">
+      <rect>
+       <x>161</x>
+       <y>37</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#configFr_line_lb
+{
+	color: #5D677E;              /* Màu trắng */
+    font-family: &quot;Segoe UI&quot;, sans-serif; /* Font không chân hiện đại */
+    font-weight: 900;            /* Độ dày tối đa */
+    font-style: normal;          /* Chữ nghiêng */
+    font-size: 13px;             /* Kích thước chữ */
+    letter-spacing: 1px;         /* Khoảng cách giữa các chữ */
+}</string>
+     </property>
+     <property name="text">
+      <string>Production Line</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="configFr_line_list">
+     <property name="geometry">
+      <rect>
+       <x>159</x>
+       <y>62</y>
+       <width>121</width>
+       <height>31</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="configFr_operation_lb">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>110</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#configFr_operation_lb
+{
+	color: #5D677E;              /* Màu trắng */
+    font-family: &quot;Segoe UI&quot;, sans-serif; /* Font không chân hiện đại */
+    font-weight: 900;            /* Độ dày tối đa */
+    font-style: normal;          /* Chữ nghiêng */
+    font-size: 13px;             /* Kích thước chữ */
+    letter-spacing: 1px;         /* Khoảng cách giữa các chữ */
+}</string>
+     </property>
+     <property name="text">
+      <string>Operation Mode</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>150</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Individual Check</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBox_2">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>150</y>
+       <width>111</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Bulk Check</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
+ <connections/>
+</ui>
