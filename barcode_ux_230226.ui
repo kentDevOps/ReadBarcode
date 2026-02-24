@@ -35,16 +35,19 @@
 }</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+       <enum>QFrame::Shape::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::Shadow::Raised</enum>
       </property>
       <layout class="QGridLayout" name="gridLayout_7">
        <property name="leftMargin">
         <number>0</number>
        </property>
        <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
         <number>0</number>
        </property>
        <item row="1" column="0">
@@ -63,7 +66,8 @@
          </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(255, 255, 255);
-margin-left: 10px;</string>
+margin-left: 10px;
+margin-right: 10px;</string>
          </property>
          <property name="text">
           <string/>
@@ -97,10 +101,10 @@ margin-left: 10px;</string>
 }</string>
          </property>
          <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
+          <enum>QFrame::Shape::StyledPanel</enum>
          </property>
          <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
+          <enum>QFrame::Shadow::Raised</enum>
          </property>
          <layout class="QGridLayout" name="gridLayout_6">
           <item row="0" column="0">
@@ -180,10 +184,10 @@ margin-left: 10px;</string>
 }</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+       <enum>QFrame::Shape::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::Shadow::Raised</enum>
       </property>
       <layout class="QGridLayout" name="gridLayout">
        <item row="0" column="0">
@@ -233,7 +237,7 @@ margin-left: 10px;</string>
           <string>Notice</string>
          </property>
          <property name="alignment">
-          <set>Qt::AlignCenter</set>
+          <set>Qt::AlignmentFlag::AlignCenter</set>
          </property>
         </widget>
        </item>
@@ -263,10 +267,10 @@ margin-left: 10px;</string>
 }</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+       <enum>QFrame::Shape::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::Shadow::Raised</enum>
       </property>
       <layout class="QGridLayout" name="gridLayout_12">
        <item row="0" column="0">
@@ -467,16 +471,19 @@ margin-left: 10px;</string>
 }</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+       <enum>QFrame::Shape::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::Shadow::Raised</enum>
       </property>
       <layout class="QGridLayout" name="gridLayout_9">
        <property name="leftMargin">
         <number>0</number>
        </property>
        <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
         <number>0</number>
        </property>
        <item row="0" column="0" colspan="2">
@@ -498,10 +505,10 @@ margin-left: 10px;</string>
 </string>
          </property>
          <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
+          <enum>QFrame::Shape::StyledPanel</enum>
          </property>
          <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
+          <enum>QFrame::Shadow::Raised</enum>
          </property>
          <layout class="QGridLayout" name="gridLayout_8">
           <item row="0" column="0">
@@ -559,11 +566,17 @@ margin-left: 10px;</string>
        </item>
        <item row="1" column="0">
         <layout class="QVBoxLayout" name="verticalLayout_2">
+         <property name="spacing">
+          <number>0</number>
+         </property>
          <property name="leftMargin">
           <number>8</number>
          </property>
-         <property name="rightMargin">
+         <property name="topMargin">
           <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>8</number>
          </property>
          <item>
           <widget class="QLabel" name="configFr_project_lb">
@@ -597,14 +610,23 @@ margin-left: 10px;</string>
              <height>31</height>
             </size>
            </property>
+           <property name="currentText">
+            <string/>
+           </property>
           </widget>
          </item>
         </layout>
        </item>
        <item row="1" column="1">
         <layout class="QVBoxLayout" name="verticalLayout_3">
+         <property name="spacing">
+          <number>0</number>
+         </property>
          <property name="leftMargin">
           <number>5</number>
+         </property>
+         <property name="rightMargin">
+          <number>8</number>
          </property>
          <item>
           <widget class="QLabel" name="configFr_line_lb">
@@ -671,6 +693,12 @@ margin-left: 10px;</string>
         <layout class="QHBoxLayout" name="horizontalLayout_3">
          <property name="leftMargin">
           <number>9</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
          </property>
          <item>
           <widget class="QCheckBox" name="chkbox_individual">
@@ -744,16 +772,19 @@ margin-left: 10px;</string>
 }</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+       <enum>QFrame::Shape::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::Shadow::Raised</enum>
       </property>
       <layout class="QGridLayout" name="gridLayout_11">
        <property name="leftMargin">
         <number>0</number>
        </property>
        <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
         <number>0</number>
        </property>
        <item row="0" column="0">
@@ -774,10 +805,10 @@ margin-left: 10px;</string>
 }</string>
          </property>
          <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
+          <enum>QFrame::Shape::StyledPanel</enum>
          </property>
          <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
+          <enum>QFrame::Shadow::Raised</enum>
          </property>
          <layout class="QGridLayout" name="gridLayout_10">
           <property name="leftMargin">
@@ -847,6 +878,7 @@ margin-left: 10px;</string>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(255, 255, 255);
 margin-left: 10px;
+margin-right: 10px;
 </string>
          </property>
         </widget>
@@ -872,10 +904,10 @@ margin-left: 10px;
 </string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+       <enum>QFrame::Shape::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::Shadow::Raised</enum>
       </property>
       <layout class="QGridLayout" name="gridLayout_5">
        <item row="0" column="0">
@@ -974,10 +1006,10 @@ margin-left: 10px;
 }</string>
          </property>
          <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
+          <enum>QFrame::Shape::StyledPanel</enum>
          </property>
          <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
+          <enum>QFrame::Shadow::Raised</enum>
          </property>
          <layout class="QGridLayout" name="gridLayout_2">
           <item row="0" column="0">
@@ -1006,7 +1038,7 @@ margin-left: 10px;
              <string>Total</string>
             </property>
             <property name="alignment">
-             <set>Qt::AlignCenter</set>
+             <set>Qt::AlignmentFlag::AlignCenter</set>
             </property>
            </widget>
           </item>
@@ -1036,7 +1068,7 @@ margin-left: 10px;
              <string>0</string>
             </property>
             <property name="alignment">
-             <set>Qt::AlignCenter</set>
+             <set>Qt::AlignmentFlag::AlignCenter</set>
             </property>
            </widget>
           </item>
@@ -1057,10 +1089,10 @@ margin-left: 10px;
 }</string>
          </property>
          <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
+          <enum>QFrame::Shape::StyledPanel</enum>
          </property>
          <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
+          <enum>QFrame::Shadow::Raised</enum>
          </property>
          <layout class="QGridLayout" name="gridLayout_3">
           <item row="1" column="0">
@@ -1089,7 +1121,7 @@ margin-left: 10px;
              <string>0</string>
             </property>
             <property name="alignment">
-             <set>Qt::AlignCenter</set>
+             <set>Qt::AlignmentFlag::AlignCenter</set>
             </property>
            </widget>
           </item>
@@ -1119,7 +1151,7 @@ margin-left: 10px;
              <string>Pass</string>
             </property>
             <property name="alignment">
-             <set>Qt::AlignCenter</set>
+             <set>Qt::AlignmentFlag::AlignCenter</set>
             </property>
            </widget>
           </item>
@@ -1140,10 +1172,10 @@ margin-left: 10px;
 }</string>
          </property>
          <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
+          <enum>QFrame::Shape::StyledPanel</enum>
          </property>
          <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
+          <enum>QFrame::Shadow::Raised</enum>
          </property>
          <layout class="QGridLayout" name="gridLayout_4">
           <item row="0" column="0">
@@ -1172,7 +1204,7 @@ margin-left: 10px;
              <string>Fail</string>
             </property>
             <property name="alignment">
-             <set>Qt::AlignCenter</set>
+             <set>Qt::AlignmentFlag::AlignCenter</set>
             </property>
            </widget>
           </item>
@@ -1202,7 +1234,7 @@ margin-left: 10px;
              <string>0</string>
             </property>
             <property name="alignment">
-             <set>Qt::AlignCenter</set>
+             <set>Qt::AlignmentFlag::AlignCenter</set>
             </property>
            </widget>
           </item>
