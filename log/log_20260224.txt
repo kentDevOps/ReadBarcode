@@ -1,0 +1,18 @@
+
+[2026/02/24 23:00:04] Occur Error : 
+ Traceback (most recent call last):
+  File "d:\02_Code\00_Python\ReadBarcode\ReadBarcode\main.py", line 36, in __init__
+    chk_mandatory_folder("database")
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "d:\02_Code\00_Python\ReadBarcode\ReadBarcode\common\fileProcess.py", line 8, in chk_mandatory_folder
+    raise FileNotFoundError(f"Folder {strFolderPath} is not exists!!!")
+FileNotFoundError: Folder d:\02_Code\00_Python\ReadBarcode\ReadBarcode\database is not exists!!!
+
+[2026/02/24 23:04:15] Occur Error : 
+ Traceback (most recent call last):
+  File "d:\02_Code\00_Python\ReadBarcode\ReadBarcode\main.py", line 36, in __init__
+    chk_mandatory_folder("database")
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "d:\02_Code\00_Python\ReadBarcode\ReadBarcode\common\fileProcess.py", line 8, in chk_mandatory_folder
+    raise FileNotFoundError(f"Folder {strFolderPath} is not exists!!!")
+FileNotFoundError: Folder d:\02_Code\00_Python\ReadBarcode\ReadBarcode\database is not exists!!!

@@ -17,33 +17,53 @@ nào gây ra lỗi khi chương trình bị crash.
 '''
 import os,sys,traceback # import các thư viện liên quan tới hệ thống, đường dẫn , ghi lỗi
 from common.log import *
+from common.fileProcess import chk_mandatory_folder
 '''Tạo một lớp tên là MainWindow kế thừa từ QMainWindow. 
 Nó sẽ đóng vai trò là "bộ não" điều khiển toàn bộ giao diện của bạn.
 '''
 class MainWindow(QMainWindow):
-#---------------------Khoi Tao----------------------------
+#region---------------------Khoi Tao----------------------------
     def __init__(self, parent = None):
         try:
             QMainWindow.__init__(self)# Khởi tạo lớp cha (QMainWindow)
             self.ui = Ui_MainWindow()# Tạo một đối tượng giao diện từ class đã import
             self.ui.setupUi(self)# Đổ toàn bộ các nút bấm, layout từ file UI vào cửa sổ này
             #Show Window
-            self.setWindowTitle("Developed By Kent - ZALO : 0375803690")
+            self.setWindowTitle("Effective Way For Label Approval Process - ZALO : 0375803690")
             icon_path = self.load_form_icon()
             self.setWindowIcon(icon_path) # set icon cho title
+            self.center_on_screen() # set gui to the center
+            chk_mandatory_folder("database")
+            chk_mandatory_folder("img")
         except Exception as e:
             err_msg = traceback.format_exc()# Lấy chi tiết lỗi (dòng mấy, lỗi gì)
             QMessageBox.critical(self, "Error Alarm", str(e))
             logExport(f"Occur Error : \n {err_msg}")
+#region Ham Dinh Dang
     #--> Hàm Load icon cho title của mainWindow
     def load_form_icon(self):
         strAbsPath = os.path.abspath(sys.argv[0])
         print(strAbsPath) 
         strCrrPath = os.path.dirname(strAbsPath)
         print(strCrrPath)
-        strImgPath = os.path.join(strCrrPath,"img") + r"\profile.png"
+        strImgPath = os.path.join(strCrrPath,"img") + r"\kca.ico"
         pixmap = QPixmap(strImgPath)
         return pixmap
+    #--> Hàm set gui ở trung tâm màn hình
+    def center_on_screen(self):
+        # Lấy màn hình hiện tại
+        screen = QApplication.primaryScreen()
+        screen_geometry = screen.availableGeometry()
+
+        # Lấy kích thước form
+        size = self.frameGeometry()
+
+        # Tính vị trí chính giữa
+        center_point = screen_geometry.center()
+        size.moveCenter(center_point)
+
+        # Đặt lại vị trí cửa sổ
+        self.move(size.topLeft())
 if __name__ == '__main__':
     # Bat loi toan cuc
     '''
