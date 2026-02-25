@@ -2,6 +2,7 @@ import os
 import sys
 from datetime import datetime
 import traceback
+import configparser
 def testLog():
     a= 5
     b= 0
@@ -40,4 +41,20 @@ def logExport(ex):
         logFile = open(strFilePath,"a")
         logFile.writelines("\n")
         logFile.writelines(strContents)
-        logFile.close()    
+        logFile.close()  
+def read_ini(section,key):  
+    config = configparser.ConfigParser()# Tạo một đối tượng ConfigParser để đọc file .ini
+    strAbsPath = os.path.abspath(sys.argv[0])# Lấy đường dẫn tuyệt đối của file đang chạy (main.py)
+    strCurrPath = os.path.dirname(strAbsPath)# Lấy thư mục chứa file đang chạy
+    strLogPath = os.path.join(strCurrPath,"database","config.ini")# Tạo đường dẫn đến file config.ini trong thư mục database
+    config.read(strLogPath,encoding='utf-8')# Đọc file config.ini
+    rs = config[section][key]
+    #port = config.getint('SERVER', 'Port')# Lấy giá trị của khóa 'Port' trong section 'SERVER' và chuyển nó thành số nguyên
+    return rs
+'''
+# Ghi file config
+config = configparser.ConfigParser()
+config['SERVER'] = {'IP': '192.168.1.1', 'Port': '8080'}
+with open('settings.ini', 'w') as configfile:
+    config.write(configfile)
+'''

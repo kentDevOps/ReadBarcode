@@ -1,0 +1,77 @@
+
+[2026/02/25 10:07:26] Occur Error : 
+ Traceback (most recent call last):
+  File "c:\00_Code\00_Python\06_ReadBarcode\ReadBarcode\main.py", line 40, in __init__
+    load_combo_box(self.ui.configFr_prj_list, "project", "project_name")
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\00_Code\00_Python\06_ReadBarcode\ReadBarcode\UI\interface.py", line 4, in load_combo_box
+    rs = get_value_db(table_name, column_name)[0]
+         ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\00_Code\00_Python\06_ReadBarcode\ReadBarcode\common\sqlProcess.py", line 17, in get_value_db
+    cursor.execute(query)
+    ~~~~~~~~~~~~~~^^^^^^^
+sqlite3.OperationalError: no such column: project_name
+
+[2026/02/25 10:32:03] Occur Error : 
+ Traceback (most recent call last):
+  File "c:\00_Code\00_Python\06_ReadBarcode\ReadBarcode\main.py", line 42, in __init__
+    self.ui.configFr_prj_list.currentTextChanged.connect(load_cbx_line(self.ui.configFr_line_list, "line", "line", "project", self.ui.configFr_prj_list.currentText()))
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Expected signal or callable, got "NoneType"
+
+[2026/02/25 10:33:41] Occur Error : 
+ Traceback (most recent call last):
+  File "C:\00_Code\00_Python\06_ReadBarcode\ReadBarcode\main.py", line 42, in __init__
+    self.ui.configFr_prj_list.currentTextChanged.connect(load_cbx_line(self.ui.configFr_line_list, "lineN", "line", "project", self.ui.configFr_prj_list.currentText()))
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Expected signal or callable, got "NoneType"
+
+[2026/02/25 10:42:08] Occur Error : 
+ Traceback (most recent call last):
+  File "c:\00_Code\00_Python\06_ReadBarcode\ReadBarcode\main.py", line 44, in __init__
+    self.ui.configFr_prj_list.currentTextChanged.connect(load_cbx_line(self.ui.configFr_line_list, "lineN", "line", "project", self.ui.configFr_prj_list.currentText()))
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Expected signal or callable, got "NoneType"
+
+[2026/02/25 13:20:50] Uncaught Exception:
+Traceback (most recent call last):
+  File "c:\00_Code\00_Python\06_ReadBarcode\ReadBarcode\main.py", line 90, in on_mode_changed
+    if button == self.ui.checkbox_individual:
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Ui_MainWindow' object has no attribute 'checkbox_individual'. Did you mean: 'chkbox_individual'?
+
+[2026/02/25 13:20:56] Uncaught Exception:
+Traceback (most recent call last):
+  File "c:\00_Code\00_Python\06_ReadBarcode\ReadBarcode\main.py", line 90, in on_mode_changed
+    if button == self.ui.checkbox_individual:
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Ui_MainWindow' object has no attribute 'checkbox_individual'. Did you mean: 'chkbox_individual'?
+
+[2026/02/25 14:12:57] Uncaught Exception:
+Traceback (most recent call last):
+  File "c:\00_Code\00_Python\06_ReadBarcode\ReadBarcode\main.py", line 64, in <lambda>
+    self.ui.btnAddImg.clicked.connect(lambda text: on_btnAddImg_clicked(self.send_text))# K
+[2026/02/25 14:23:12] Uncaught Exception:
+Traceback (most recent call last):
+  File "c:\00_Code\00_Python\06_ReadBarcode\ReadBarcode\main.py", line 65, in <lambda>
+    self.ui.btnAddImg.clicked.connect(lambda text: on_btnAddImg_clicked(self.send_text,self.current_mode))# K
+[2026/02/25 14:24:20] Uncaught Exception:
+Traceback (most recent call last):
+  File "c:\00_Code\00_Python\06_ReadBarcode\ReadBarcode\main.py", line 65, in <lambda>
+    self.ui.btnAddImg.clicked.connect(lambda : on_btnAddImg_clicked(self.send_text,self.current_mode))# K
+[2026/02/25 15:13:45] Uncaught Exception:
+Traceback (most recent call last):
+  File "c:\00_Code\00_Python\06_ReadBarcode\ReadBarcode\main.py", line 64, in <lambda>
+    self.ui.btnAddImg.clicked.connect(lambda : on_btnAddImg_clicked(self.ui.chkbox_bulk,self.ui.chkbox_individual))# K
+[2026/02/25 15:58:37] Uncaught Exception:
+Traceback (most recent call last):
+  File "c:\00_Code\00_Python\06_ReadBarcode\ReadBarcode\main.py", line 64, in <lambda>
+    self.mode_group.buttonClicked.connect(lambda button: chbox_mode_changed(self.send_text,button,self.ui.chkbox_individual,self.ui.chkbox_bulk))# K
+[2026/02/25 15:58:39] Uncaught Exception:
+Traceback (most recent call last):
+  File "c:\00_Code\00_Python\06_ReadBarcode\ReadBarcode\main.py", line 66, in <lambda>
+    self.ui.btnAddImg.clicked.connect(lambda : on_btnAddImg_clicked(self.send_text,self.ui.chkbox_bulk,self.ui.chkbox_individual))# K
+[2026/02/25 15:59:41] Uncaught Exception:
+Traceback (most recent call last):
+  File "c:\00_Code\00_Python\06_ReadBarcode\ReadBarcode\main.py", line 64, in <lambda>
+    self.mode_group.buttonClicked.connect(lambda button: chbox_mode_changed(self.send_text,button,self.ui.chkbox_individual,self.ui.chkbox_bulk))# K
