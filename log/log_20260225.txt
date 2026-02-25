@@ -75,3 +75,15 @@ Traceback (most recent call last):
 Traceback (most recent call last):
   File "c:\00_Code\00_Python\06_ReadBarcode\ReadBarcode\main.py", line 64, in <lambda>
     self.mode_group.buttonClicked.connect(lambda button: chbox_mode_changed(self.send_text,button,self.ui.chkbox_individual,self.ui.chkbox_bulk))# K
+[2026/02/25 21:16:40] Uncaught Exception:
+Traceback (most recent call last):
+  File "d:\02_Code\00_Python\ReadBarcode\ReadBarcode\main.py", line 65, in <lambda>
+    self.mode_group.buttonClicked.connect(lambda button: chbox_mode_changed(self.send_text,button,self.ui.chkbox_individual,self.ui.chkbox_bulk))# K
+[2026/02/25 21:16:45] Uncaught Exception:
+Traceback (most recent call last):
+  File "d:\02_Code\00_Python\ReadBarcode\ReadBarcode\main.py", line 65, in <lambda>
+    self.mode_group.buttonClicked.connect(lambda button: chbox_mode_changed(self.send_text,button,self.ui.chkbox_individual,self.ui.chkbox_bulk))# K
+[2026/02/25 21:16:47] Uncaught Exception:
+Traceback (most recent call last):
+  File "d:\02_Code\00_Python\ReadBarcode\ReadBarcode\main.py", line 65, in <lambda>
+    self.mode_group.buttonClicked.connect(lambda button: chbox_mode_changed(self.send_text,button,self.ui.chkbox_individual,self.ui.chkbox_bulk))# K

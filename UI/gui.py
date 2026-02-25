@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'barcode_ux_230226.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.9.0
+## Created by: Qt User Interface Compiler version 6.9.1
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -44,8 +44,8 @@ class Ui_MainWindow(object):
 "	border-radius: 8px; /* Bo tr\u00f2n \u0111\u1ec1u 20px */\n"
 "	border-bottom: 4px solid #94A3B8;\n"
 "}")
-        self.imageFr.setFrameShape(QFrame.Shape.StyledPanel)
-        self.imageFr.setFrameShadow(QFrame.Shadow.Raised)
+        self.imageFr.setFrameShape(QFrame.StyledPanel)
+        self.imageFr.setFrameShadow(QFrame.Raised)
         self.gridLayout_7 = QGridLayout(self.imageFr)
         self.gridLayout_7.setObjectName(u"gridLayout_7")
         self.gridLayout_7.setContentsMargins(0, 0, 0, -1)
@@ -79,8 +79,8 @@ class Ui_MainWindow(object):
 "	border-top-left-radius: 8px;\n"
 "	border-top-right-radius: 8px;\n"
 "}")
-        self.fr_dis.setFrameShape(QFrame.Shape.StyledPanel)
-        self.fr_dis.setFrameShadow(QFrame.Shadow.Raised)
+        self.fr_dis.setFrameShape(QFrame.StyledPanel)
+        self.fr_dis.setFrameShadow(QFrame.Raised)
         self.gridLayout_6 = QGridLayout(self.fr_dis)
         self.gridLayout_6.setObjectName(u"gridLayout_6")
         self.imgFr_icon = QLabel(self.fr_dis)
@@ -113,6 +113,32 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_2.addWidget(self.imgFr_title)
 
+        self.imgFr_left = QLabel(self.fr_dis)
+        self.imgFr_left.setObjectName(u"imgFr_left")
+        sizePolicy.setHeightForWidth(self.imgFr_left.sizePolicy().hasHeightForWidth())
+        self.imgFr_left.setSizePolicy(sizePolicy)
+        self.imgFr_left.setMinimumSize(QSize(21, 21))
+        self.imgFr_left.setStyleSheet(u"#imgFr_left\n"
+"{\n"
+"	background-color:#020617;\n"
+"    border-image: url(:/img/left.png) 0 0 0 0 stretch stretch;\n"
+"}")
+
+        self.horizontalLayout_2.addWidget(self.imgFr_left)
+
+        self.imgFr_right = QLabel(self.fr_dis)
+        self.imgFr_right.setObjectName(u"imgFr_right")
+        sizePolicy.setHeightForWidth(self.imgFr_right.sizePolicy().hasHeightForWidth())
+        self.imgFr_right.setSizePolicy(sizePolicy)
+        self.imgFr_right.setMinimumSize(QSize(21, 21))
+        self.imgFr_right.setStyleSheet(u"#imgFr_right\n"
+"{\n"
+"	background-color:#020617;\n"
+"    border-image: url(:/img/right.png) 0 0 0 0 stretch stretch;\n"
+"}")
+
+        self.horizontalLayout_2.addWidget(self.imgFr_right)
+
 
         self.gridLayout_6.addLayout(self.horizontalLayout_2, 0, 1, 1, 1)
 
@@ -131,8 +157,8 @@ class Ui_MainWindow(object):
 "	border-top: 4px solid #1c64f2;\n"
 "	border-radius: 10px; /* Bo tr\u00f2n \u0111\u1ec1u 20px */\n"
 "}")
-        self.footFr.setFrameShape(QFrame.Shape.StyledPanel)
-        self.footFr.setFrameShadow(QFrame.Shadow.Raised)
+        self.footFr.setFrameShape(QFrame.StyledPanel)
+        self.footFr.setFrameShadow(QFrame.Raised)
         self.gridLayout = QGridLayout(self.footFr)
         self.gridLayout.setObjectName(u"gridLayout")
         self.footFr_title = QLabel(self.footFr)
@@ -162,7 +188,7 @@ class Ui_MainWindow(object):
 "    font-size: 16px;             /* K\u00edch th\u01b0\u1edbc ch\u1eef */\n"
 "    letter-spacing: 1px;         /* Kho\u1ea3ng c\u00e1ch gi\u1eefa c\u00e1c ch\u1eef */\n"
 "}")
-        self.footFr_notice.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.footFr_notice.setAlignment(Qt.AlignCenter)
 
         self.gridLayout.addWidget(self.footFr_notice, 0, 1, 1, 1)
 
@@ -183,8 +209,8 @@ class Ui_MainWindow(object):
 "	border-radius: 8px; /* Bo tr\u00f2n \u0111\u1ec1u 20px */\n"
 "	border-bottom: 4px solid #94A3B8;\n"
 "}")
-        self.terminationFr.setFrameShape(QFrame.Shape.StyledPanel)
-        self.terminationFr.setFrameShadow(QFrame.Shadow.Raised)
+        self.terminationFr.setFrameShape(QFrame.StyledPanel)
+        self.terminationFr.setFrameShadow(QFrame.Raised)
         self.gridLayout_12 = QGridLayout(self.terminationFr)
         self.gridLayout_12.setObjectName(u"gridLayout_12")
         self.horizontalLayout_5 = QHBoxLayout()
@@ -314,8 +340,8 @@ class Ui_MainWindow(object):
 "	border-radius: 8px; /* Bo tr\u00f2n \u0111\u1ec1u 20px */\n"
 "	border-bottom: 4px solid #94A3B8;\n"
 "}")
-        self.configFr.setFrameShape(QFrame.Shape.StyledPanel)
-        self.configFr.setFrameShadow(QFrame.Shadow.Raised)
+        self.configFr.setFrameShape(QFrame.StyledPanel)
+        self.configFr.setFrameShadow(QFrame.Raised)
         self.gridLayout_9 = QGridLayout(self.configFr)
         self.gridLayout_9.setObjectName(u"gridLayout_9")
         self.gridLayout_9.setContentsMargins(0, 0, 0, -1)
@@ -330,8 +356,8 @@ class Ui_MainWindow(object):
 "	border-top-right-radius: 8px;\n"
 "}\n"
 "")
-        self.fr_conf.setFrameShape(QFrame.Shape.StyledPanel)
-        self.fr_conf.setFrameShadow(QFrame.Shadow.Raised)
+        self.fr_conf.setFrameShape(QFrame.StyledPanel)
+        self.fr_conf.setFrameShadow(QFrame.Raised)
         self.gridLayout_8 = QGridLayout(self.fr_conf)
         self.gridLayout_8.setObjectName(u"gridLayout_8")
         self.configFr_icon = QLabel(self.fr_conf)
@@ -489,8 +515,8 @@ class Ui_MainWindow(object):
 "	border-radius: 8px; /* Bo tr\u00f2n \u0111\u1ec1u 20px */\n"
 "	border-bottom: 4px solid #94A3B8;\n"
 "}")
-        self.logFr.setFrameShape(QFrame.Shape.StyledPanel)
-        self.logFr.setFrameShadow(QFrame.Shadow.Raised)
+        self.logFr.setFrameShape(QFrame.StyledPanel)
+        self.logFr.setFrameShadow(QFrame.Raised)
         self.gridLayout_11 = QGridLayout(self.logFr)
         self.gridLayout_11.setObjectName(u"gridLayout_11")
         self.gridLayout_11.setContentsMargins(0, 0, 0, -1)
@@ -504,8 +530,8 @@ class Ui_MainWindow(object):
 "	border-top-left-radius: 8px;\n"
 "	border-top-right-radius: 8px;\n"
 "}")
-        self.fr_log.setFrameShape(QFrame.Shape.StyledPanel)
-        self.fr_log.setFrameShadow(QFrame.Shadow.Raised)
+        self.fr_log.setFrameShape(QFrame.StyledPanel)
+        self.fr_log.setFrameShadow(QFrame.Raised)
         self.gridLayout_10 = QGridLayout(self.fr_log)
         self.gridLayout_10.setObjectName(u"gridLayout_10")
         self.gridLayout_10.setContentsMargins(0, -1, -1, -1)
@@ -563,8 +589,8 @@ class Ui_MainWindow(object):
 "	border-radius: 8px; /* Bo tr\u00f2n \u0111\u1ec1u 20px */\n"
 "}\n"
 "")
-        self.headFr.setFrameShape(QFrame.Shape.StyledPanel)
-        self.headFr.setFrameShadow(QFrame.Shadow.Raised)
+        self.headFr.setFrameShape(QFrame.StyledPanel)
+        self.headFr.setFrameShadow(QFrame.Raised)
         self.gridLayout_5 = QGridLayout(self.headFr)
         self.gridLayout_5.setObjectName(u"gridLayout_5")
         self.headFr_lbIcon = QLabel(self.headFr)
@@ -631,8 +657,8 @@ class Ui_MainWindow(object):
 "    max-width: 100px;\n"
 "    min-height: 60px;\n"
 "}")
-        self.frTong.setFrameShape(QFrame.Shape.StyledPanel)
-        self.frTong.setFrameShadow(QFrame.Shadow.Raised)
+        self.frTong.setFrameShape(QFrame.StyledPanel)
+        self.frTong.setFrameShadow(QFrame.Raised)
         self.gridLayout_2 = QGridLayout(self.frTong)
         self.gridLayout_2.setObjectName(u"gridLayout_2")
         self.frTong_total = QLabel(self.frTong)
@@ -647,7 +673,7 @@ class Ui_MainWindow(object):
 "	color:#FFFFFF;\n"
 "	font-size:16px;\n"
 "}")
-        self.frTong_total.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.frTong_total.setAlignment(Qt.AlignCenter)
 
         self.gridLayout_2.addWidget(self.frTong_total, 0, 0, 1, 1)
 
@@ -661,7 +687,7 @@ class Ui_MainWindow(object):
 "	color:#FFFFFF;\n"
 "	font-size:22px;\n"
 "}")
-        self.frTong_total_value.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.frTong_total_value.setAlignment(Qt.AlignCenter)
 
         self.gridLayout_2.addWidget(self.frTong_total_value, 1, 0, 1, 1)
 
@@ -679,8 +705,8 @@ class Ui_MainWindow(object):
 "    max-width: 100px;\n"
 "    min-height: 60px;\n"
 "}")
-        self.frPass.setFrameShape(QFrame.Shape.StyledPanel)
-        self.frPass.setFrameShadow(QFrame.Shadow.Raised)
+        self.frPass.setFrameShape(QFrame.StyledPanel)
+        self.frPass.setFrameShadow(QFrame.Raised)
         self.gridLayout_3 = QGridLayout(self.frPass)
         self.gridLayout_3.setObjectName(u"gridLayout_3")
         self.frPass_vl = QLabel(self.frPass)
@@ -693,7 +719,7 @@ class Ui_MainWindow(object):
 "	color:#22C55E;\n"
 "	font-size:22px;\n"
 "}")
-        self.frPass_vl.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.frPass_vl.setAlignment(Qt.AlignCenter)
 
         self.gridLayout_3.addWidget(self.frPass_vl, 1, 0, 1, 1)
 
@@ -707,7 +733,7 @@ class Ui_MainWindow(object):
 "	color:#22C55E;\n"
 "	font-size:16px;\n"
 "}")
-        self.frPass_lb.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.frPass_lb.setAlignment(Qt.AlignCenter)
 
         self.gridLayout_3.addWidget(self.frPass_lb, 0, 0, 1, 1)
 
@@ -725,8 +751,8 @@ class Ui_MainWindow(object):
 "    max-width: 100px;\n"
 "    min-height: 60px;\n"
 "}")
-        self.frFail.setFrameShape(QFrame.Shape.StyledPanel)
-        self.frFail.setFrameShadow(QFrame.Shadow.Raised)
+        self.frFail.setFrameShape(QFrame.StyledPanel)
+        self.frFail.setFrameShadow(QFrame.Raised)
         self.gridLayout_4 = QGridLayout(self.frFail)
         self.gridLayout_4.setObjectName(u"gridLayout_4")
         self.frFail_lb = QLabel(self.frFail)
@@ -739,7 +765,7 @@ class Ui_MainWindow(object):
 "	color:#EF4444;\n"
 "	font-size:16px;\n"
 "}")
-        self.frFail_lb.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.frFail_lb.setAlignment(Qt.AlignCenter)
 
         self.gridLayout_4.addWidget(self.frFail_lb, 0, 0, 1, 1)
 
@@ -753,7 +779,7 @@ class Ui_MainWindow(object):
 "	color:#EF4444;\n"
 "	font-size:22px;\n"
 "}")
-        self.frFail_vl.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.frFail_vl.setAlignment(Qt.AlignCenter)
 
         self.gridLayout_4.addWidget(self.frFail_vl, 1, 0, 1, 1)
 
@@ -775,6 +801,8 @@ class Ui_MainWindow(object):
         self.imgFr_display.setText("")
         self.imgFr_icon.setText("")
         self.imgFr_title.setText(QCoreApplication.translate("MainWindow", u"Image Display", None))
+        self.imgFr_left.setText("")
+        self.imgFr_right.setText("")
         self.footFr_title.setText(QCoreApplication.translate("MainWindow", u"Developed by Kent - PE Label Team", None))
         self.footFr_notice.setText(QCoreApplication.translate("MainWindow", u"Notice", None))
         self.terminationFr_icon.setText("")

@@ -1,5 +1,7 @@
 <RCC>
   <qresource>
+    <file>img/left.png</file>
+    <file>img/right.png</file>
     <file>img/note.png</file>
     <file>img/loop.png</file>
     <file>img/loadFile.png</file>

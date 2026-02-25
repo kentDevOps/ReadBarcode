@@ -62,7 +62,7 @@ class MainWindow(QMainWindow):
             # Thiết lập chế độ loại trừ (Chỉ cho phép chọn 1)
             self.mode_group.setExclusive(True)
             # 2. Kết nối sự kiện click của cả nhóm
-            self.mode_group.buttonClicked.connect(lambda button: chbox_mode_changed(self.send_text,button,self.ui.chkbox_individual,self.ui.chkbox_bulk))# Kết nối sự kiện click của nhóm checkbox với hàm xử lý on_mode_changed
+            self.mode_group.buttonClicked.connect(lambda button: chbox_mode_changed(button,self.ui.chkbox_individual,self.ui.chkbox_bulk))# Kết nối sự kiện click của nhóm checkbox với hàm xử lý on_mode_changed
             # Nút AddImage để load ảnh hoặc folder event
             self.ui.btnAddImg.clicked.connect(lambda : on_btnAddImg_clicked(self.send_text,self.ui.chkbox_bulk,self.ui.chkbox_individual))# Kết nối sự kiện click của nút Add Image với hàm xử lý on_btnAddImg_clicked
             self.ui.btnReadBarcode.clicked.connect(lambda : self.on_btnRead_clicked())       
