@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1214</width>
-    <height>747</height>
+    <width>1244</width>
+    <height>774</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,284 +18,6 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_13">
-    <item row="1" column="0" rowspan="2">
-     <widget class="QFrame" name="imageFr">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">#imageFr
-{
-	background-color:#CBD5E1;
-	border-radius: 8px; /* Bo tròn đều 20px */
-	border-bottom: 4px solid #94A3B8;
-}</string>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <layout class="QGridLayout" name="gridLayout_7">
-       <property name="leftMargin">
-        <number>0</number>
-       </property>
-       <property name="topMargin">
-        <number>0</number>
-       </property>
-       <property name="rightMargin">
-        <number>0</number>
-       </property>
-       <item row="1" column="0">
-        <widget class="QLabel" name="imgFr_display">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-           <horstretch>18</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>381</width>
-           <height>508</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(255, 255, 255);
-margin-left: 10px;
-margin-right: 10px;</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="0">
-        <widget class="QFrame" name="fr_dis">
-         <property name="enabled">
-          <bool>true</bool>
-         </property>
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>401</width>
-           <height>41</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">#fr_dis
-{
-	background-color:#020617;
-	/*border-radius: 8px 8px 0 0; /* Bo tròn đều 20px */
-	border-top-left-radius: 8px;
-	border-top-right-radius: 8px;
-}</string>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
-         </property>
-         <layout class="QGridLayout" name="gridLayout_6">
-          <item row="0" column="0">
-           <widget class="QLabel" name="imgFr_icon">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>21</width>
-              <height>21</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">#imgFr_icon
-{
-	background-color:#020617;
-    border-image: url(:/img/pic.png) 0 0 0 0 stretch stretch;
-}</string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_2">
-            <item>
-             <widget class="QLabel" name="imgFr_title">
-              <property name="minimumSize">
-               <size>
-                <width>121</width>
-                <height>21</height>
-               </size>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">#imgFr_title
-{
-	color: #FFFFFF;              /* Màu trắng */
-    font-family: &quot;Segoe UI&quot;, sans-serif; /* Font không chân hiện đại */
-    font-weight: 900;            /* Độ dày tối đa */
-    font-style: normal;          /* Chữ nghiêng */
-    font-size: 13px;             /* Kích thước chữ */
-    letter-spacing: 1px;         /* Khoảng cách giữa các chữ */
-}</string>
-              </property>
-              <property name="text">
-               <string>Image Display</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="imgFr_left">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>21</width>
-                <height>21</height>
-               </size>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">#imgFr_left
-{
-	background-color:#020617;
-    border-image: url(:/img/left.png) 0 0 0 0 stretch stretch;
-}</string>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="imgFr_right">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>21</width>
-                <height>21</height>
-               </size>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">#imgFr_right
-{
-	background-color:#020617;
-    border-image: url(:/img/right.png) 0 0 0 0 stretch stretch;
-}</string>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-         </layout>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
-    <item row="3" column="0" colspan="3">
-     <widget class="QFrame" name="footFr">
-      <property name="minimumSize">
-       <size>
-        <width>1186</width>
-        <height>68</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">#footFr
-{
-	background-color:#020617;
-	border-top: 4px solid #1c64f2;
-	border-radius: 10px; /* Bo tròn đều 20px */
-}</string>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <layout class="QGridLayout" name="gridLayout">
-       <item row="0" column="0">
-        <widget class="QLabel" name="footFr_title">
-         <property name="minimumSize">
-          <size>
-           <width>301</width>
-           <height>31</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">#footFr_title
-{
-	color: #FFFFFF;              /* Màu trắng */
-    font-family: &quot;Segoe UI&quot;, sans-serif; /* Font không chân hiện đại */
-    font-weight: 900;            /* Độ dày tối đa */
-    font-style: normal;          /* Chữ nghiêng */
-    font-size: 11px;             /* Kích thước chữ */
-    letter-spacing: 1px;         /* Khoảng cách giữa các chữ */
-}</string>
-         </property>
-         <property name="text">
-          <string>Developed by Kent - PE Label Team</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QLabel" name="footFr_notice">
-         <property name="minimumSize">
-          <size>
-           <width>821</width>
-           <height>51</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">#footFr_notice
-{
-	color: #FFFFFF;              /* Màu trắng */
-    font-family: &quot;Segoe UI&quot;, sans-serif; /* Font không chân hiện đại */
-    font-weight: 900;            /* Độ dày tối đa */
-    font-style: normal;          /* Chữ nghiêng */
-    font-size: 16px;             /* Kích thước chữ */
-    letter-spacing: 1px;         /* Khoảng cách giữa các chữ */
-}</string>
-         </property>
-         <property name="text">
-          <string>Notice</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-    </item>
     <item row="1" column="2">
      <widget class="QFrame" name="terminationFr">
       <property name="sizePolicy">
@@ -319,10 +41,10 @@ margin-right: 10px;</string>
 }</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+       <enum>QFrame::Shape::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::Shadow::Raised</enum>
       </property>
       <layout class="QGridLayout" name="gridLayout_12">
        <item row="0" column="0">
@@ -500,6 +222,207 @@ margin-right: 10px;</string>
       </layout>
      </widget>
     </item>
+    <item row="1" column="0" rowspan="2">
+     <widget class="QFrame" name="imageFr">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#imageFr
+{
+	background-color:#CBD5E1;
+	border-radius: 8px; /* Bo tròn đều 20px */
+	border-bottom: 4px solid #94A3B8;
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_7">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <item row="1" column="0">
+        <widget class="QLabel" name="imgFr_display">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>18</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>381</width>
+           <height>508</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);
+margin-left: 10px;
+margin-right: 10px;</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QFrame" name="fr_dis">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>401</width>
+           <height>41</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#fr_dis
+{
+	background-color:#020617;
+	/*border-radius: 8px 8px 0 0; /* Bo tròn đều 20px */
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Shape::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Shadow::Raised</enum>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_6">
+          <item row="0" column="0">
+           <widget class="QLabel" name="imgFr_icon">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>21</width>
+              <height>21</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">#imgFr_icon
+{
+	background-color:#020617;
+    border-image: url(:/img/pic.png) 0 0 0 0 stretch stretch;
+}</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QLabel" name="imgFr_title">
+              <property name="minimumSize">
+               <size>
+                <width>121</width>
+                <height>21</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">#imgFr_title
+{
+	color: #FFFFFF;              /* Màu trắng */
+    font-family: &quot;Segoe UI&quot;, sans-serif; /* Font không chân hiện đại */
+    font-weight: 900;            /* Độ dày tối đa */
+    font-style: normal;          /* Chữ nghiêng */
+    font-size: 13px;             /* Kích thước chữ */
+    letter-spacing: 1px;         /* Khoảng cách giữa các chữ */
+}</string>
+              </property>
+              <property name="text">
+               <string>Image Display</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="imgFr_left">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>21</width>
+                <height>21</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">#imgFr_left
+{
+	background-color:#020617;
+    border-image: url(:/img/left.png) 0 0 0 0 stretch stretch;
+}</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="imgFr_right">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>21</width>
+                <height>21</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">#imgFr_right
+{
+	background-color:#020617;
+    border-image: url(:/img/right.png) 0 0 0 0 stretch stretch;
+}</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
     <item row="1" column="1">
      <widget class="QFrame" name="configFr">
       <property name="sizePolicy">
@@ -523,10 +446,10 @@ margin-right: 10px;</string>
 }</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+       <enum>QFrame::Shape::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::Shadow::Raised</enum>
       </property>
       <layout class="QGridLayout" name="gridLayout_9">
        <property name="leftMargin">
@@ -557,10 +480,10 @@ margin-right: 10px;</string>
 </string>
          </property>
          <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
+          <enum>QFrame::Shape::StyledPanel</enum>
          </property>
          <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
+          <enum>QFrame::Shadow::Raised</enum>
          </property>
          <layout class="QGridLayout" name="gridLayout_8">
           <item row="0" column="0">
@@ -824,22 +747,13 @@ margin-right: 10px;</string>
 }</string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+       <enum>QFrame::Shape::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::Shadow::Raised</enum>
       </property>
       <layout class="QGridLayout" name="gridLayout_11">
-       <property name="leftMargin">
-        <number>0</number>
-       </property>
-       <property name="topMargin">
-        <number>0</number>
-       </property>
-       <property name="rightMargin">
-        <number>0</number>
-       </property>
-       <item row="0" column="0">
+       <item row="0" column="0" colspan="2">
         <widget class="QFrame" name="fr_log">
          <property name="minimumSize">
           <size>
@@ -857,15 +771,39 @@ margin-right: 10px;</string>
 }</string>
          </property>
          <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
+          <enum>QFrame::Shape::StyledPanel</enum>
          </property>
          <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
+          <enum>QFrame::Shadow::Raised</enum>
          </property>
          <layout class="QGridLayout" name="gridLayout_10">
           <property name="leftMargin">
            <number>0</number>
           </property>
+          <item row="0" column="1">
+           <widget class="QLabel" name="logFr_title">
+            <property name="minimumSize">
+             <size>
+              <width>691</width>
+              <height>21</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">#logFr_title
+{
+	color: #FFFFFF;              /* Màu trắng */
+    font-family: &quot;Segoe UI&quot;, sans-serif; /* Font không chân hiện đại */
+    font-weight: 900;            /* Độ dày tối đa */
+    font-style: normal;          /* Chữ nghiêng */
+    font-size: 18px;             /* Kích thước chữ */
+    letter-spacing: 1px;         /* Khoảng cách giữa các chữ */
+}</string>
+            </property>
+            <property name="text">
+             <string>Operation Logs Record</string>
+            </property>
+           </widget>
+          </item>
           <item row="0" column="0">
            <widget class="QLabel" name="logFr_icon">
             <property name="sizePolicy">
@@ -892,46 +830,179 @@ margin-right: 10px;</string>
             </property>
            </widget>
           </item>
-          <item row="0" column="1">
-           <widget class="QLabel" name="logFr_title">
-            <property name="minimumSize">
-             <size>
-              <width>691</width>
-              <height>21</height>
-             </size>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">#logFr_title
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <widget class="QLabel" name="configFr_title_2">
+           <property name="minimumSize">
+            <size>
+             <width>241</width>
+             <height>21</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">#configFr_title_2
+{
+	color: #5D677E;              /* Màu trắng */
+    font-family: &quot;Segoe UI&quot;, sans-serif; /* Font không chân hiện đại */
+    font-weight: 900;            /* Độ dày tối đa */
+    font-style: normal;          /* Chữ nghiêng */
+    font-size: 11px;             /* Kích thước chữ */
+    letter-spacing: 1px;         /* Khoảng cách giữa các chữ */
+	margin-left: 6px;
+}</string>
+           </property>
+           <property name="text">
+            <string>Image List:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTableView" name="tableView_3">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>291</width>
+             <height>330</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);
+margin-left: 10px;
+margin-right: 10px;
+</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="1">
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <widget class="QLabel" name="configFr_title_3">
+           <property name="minimumSize">
+            <size>
+             <width>241</width>
+             <height>21</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">#configFr_title_3
+{
+	color: #5D677E;              /* Màu trắng */
+    font-family: &quot;Segoe UI&quot;, sans-serif; /* Font không chân hiện đại */
+    font-weight: 900;            /* Độ dày tối đa */
+    font-style: normal;          /* Chữ nghiêng */
+    font-size: 13px;             /* Kích thước chữ */
+    letter-spacing: 1px;         /* Khoảng cách giữa các chữ */
+	margin-left: 6px;
+}</string>
+           </property>
+           <property name="text">
+            <string>Result List:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTableView" name="tableView">
+           <property name="minimumSize">
+            <size>
+             <width>500</width>
+             <height>330</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(255, 255, 255);
+margin-left: 10px;
+margin-right: 10px;
+</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="3" column="0" colspan="3">
+     <widget class="QFrame" name="footFr">
+      <property name="minimumSize">
+       <size>
+        <width>1186</width>
+        <height>68</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#footFr
+{
+	background-color:#020617;
+	border-top: 4px solid #1c64f2;
+	border-radius: 10px; /* Bo tròn đều 20px */
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="footFr_title">
+         <property name="minimumSize">
+          <size>
+           <width>301</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#footFr_title
 {
 	color: #FFFFFF;              /* Màu trắng */
     font-family: &quot;Segoe UI&quot;, sans-serif; /* Font không chân hiện đại */
     font-weight: 900;            /* Độ dày tối đa */
     font-style: normal;          /* Chữ nghiêng */
-    font-size: 18px;             /* Kích thước chữ */
+    font-size: 11px;             /* Kích thước chữ */
     letter-spacing: 1px;         /* Khoảng cách giữa các chữ */
 }</string>
-            </property>
-            <property name="text">
-             <string>Operation Logs Record</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
+         </property>
+         <property name="text">
+          <string>Developed by Kent - PE Label Team</string>
+         </property>
         </widget>
        </item>
-       <item row="1" column="0">
-        <widget class="QTableView" name="tableView">
+       <item row="0" column="1">
+        <widget class="QLabel" name="footFr_notice">
          <property name="minimumSize">
           <size>
-           <width>751</width>
-           <height>338</height>
+           <width>821</width>
+           <height>51</height>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(255, 255, 255);
-margin-left: 10px;
-margin-right: 10px;
-</string>
+          <string notr="true">#footFr_notice
+{
+	color: #FFFFFF;              /* Màu trắng */
+    font-family: &quot;Segoe UI&quot;, sans-serif; /* Font không chân hiện đại */
+    font-weight: 900;            /* Độ dày tối đa */
+    font-style: normal;          /* Chữ nghiêng */
+    font-size: 16px;             /* Kích thước chữ */
+    letter-spacing: 1px;         /* Khoảng cách giữa các chữ */
+}</string>
+         </property>
+         <property name="text">
+          <string>Notice</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignmentFlag::AlignCenter</set>
          </property>
         </widget>
        </item>
@@ -956,10 +1027,10 @@ margin-right: 10px;
 </string>
       </property>
       <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
+       <enum>QFrame::Shape::StyledPanel</enum>
       </property>
       <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
+       <enum>QFrame::Shadow::Raised</enum>
       </property>
       <layout class="QGridLayout" name="gridLayout_5">
        <item row="0" column="0">
@@ -1058,10 +1129,10 @@ margin-right: 10px;
 }</string>
          </property>
          <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
+          <enum>QFrame::Shape::StyledPanel</enum>
          </property>
          <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
+          <enum>QFrame::Shadow::Raised</enum>
          </property>
          <layout class="QGridLayout" name="gridLayout_2">
           <item row="0" column="0">
@@ -1090,7 +1161,7 @@ margin-right: 10px;
              <string>Total</string>
             </property>
             <property name="alignment">
-             <set>Qt::AlignCenter</set>
+             <set>Qt::AlignmentFlag::AlignCenter</set>
             </property>
            </widget>
           </item>
@@ -1120,7 +1191,7 @@ margin-right: 10px;
              <string>0</string>
             </property>
             <property name="alignment">
-             <set>Qt::AlignCenter</set>
+             <set>Qt::AlignmentFlag::AlignCenter</set>
             </property>
            </widget>
           </item>
@@ -1141,10 +1212,10 @@ margin-right: 10px;
 }</string>
          </property>
          <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
+          <enum>QFrame::Shape::StyledPanel</enum>
          </property>
          <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
+          <enum>QFrame::Shadow::Raised</enum>
          </property>
          <layout class="QGridLayout" name="gridLayout_3">
           <item row="1" column="0">
@@ -1173,7 +1244,7 @@ margin-right: 10px;
              <string>0</string>
             </property>
             <property name="alignment">
-             <set>Qt::AlignCenter</set>
+             <set>Qt::AlignmentFlag::AlignCenter</set>
             </property>
            </widget>
           </item>
@@ -1203,7 +1274,7 @@ margin-right: 10px;
              <string>Pass</string>
             </property>
             <property name="alignment">
-             <set>Qt::AlignCenter</set>
+             <set>Qt::AlignmentFlag::AlignCenter</set>
             </property>
            </widget>
           </item>
@@ -1224,10 +1295,10 @@ margin-right: 10px;
 }</string>
          </property>
          <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
+          <enum>QFrame::Shape::StyledPanel</enum>
          </property>
          <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
+          <enum>QFrame::Shadow::Raised</enum>
          </property>
          <layout class="QGridLayout" name="gridLayout_4">
           <item row="0" column="0">
@@ -1256,7 +1327,7 @@ margin-right: 10px;
              <string>Fail</string>
             </property>
             <property name="alignment">
-             <set>Qt::AlignCenter</set>
+             <set>Qt::AlignmentFlag::AlignCenter</set>
             </property>
            </widget>
           </item>
@@ -1286,7 +1357,7 @@ margin-right: 10px;
              <string>0</string>
             </property>
             <property name="alignment">
-             <set>Qt::AlignCenter</set>
+             <set>Qt::AlignmentFlag::AlignCenter</set>
             </property>
            </widget>
           </item>
