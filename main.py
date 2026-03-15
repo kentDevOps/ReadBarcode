@@ -11,7 +11,7 @@ from PySide6.QtWidgets import (QApplication,QMessageBox,QMainWindow,QButtonGroup
 - QPixmap: Hiển thị ảnh: QPixmap được tối ưu hóa để vẽ hình ảnh lên các widget như 
    QLabel hoặc QPushButton , Hỗ trợ nhiều định dạng , tương tác với .qrc file
 '''
-from PySide6.QtGui import (QPixmap,QStandardItem,QStandardItemModel)# QPixmap là một lớp trong PySide6 dùng để xử lý hình ảnh. Nó cho phép bạn tải, hiển thị và thao tác với các hình ảnh trong ứng dụng của mình. QPixmap được tối ưu hóa để vẽ hình ảnh lên các widget như QLabel hoặc QPushButton, và hỗ trợ nhiều định dạng hình ảnh khác nhau. Bạn cũng có thể sử dụng QPixmap để tương tác với các file .qrc (Qt Resource Collection) để quản lý tài nguyên hình ảnh trong ứng dụng của mình.
+from PySide6.QtGui import (QPixmap,QStandardItem,QStandardItemModel,QFont)# QPixmap là một lớp trong PySide6 dùng để xử lý hình ảnh. Nó cho phép bạn tải, hiển thị và thao tác với các hình ảnh trong ứng dụng của mình. QPixmap được tối ưu hóa để vẽ hình ảnh lên các widget như QLabel hoặc QPushButton, và hỗ trợ nhiều định dạng hình ảnh khác nhau. Bạn cũng có thể sử dụng QPixmap để tương tác với các file .qrc (Qt Resource Collection) để quản lý tài nguyên hình ảnh trong ứng dụng của mình.
 from PySide6.QtCore import (Signal,Qt,QStringListModel) # Signal để tạo tín hiệu tùy chỉnh, có thể dùng để truyền dữ liệu giữa các phần của ứng dụng
 from UI.gui import Ui_MainWindow # import giao dien tu file gui.py
 from UI.interface import * # import ham load du lieu vao combo box tu file interface.py
@@ -25,6 +25,44 @@ from common.fileProcess import chk_mandatory_folder
 '''Tạo một lớp tên là MainWindow kế thừa từ QMainWindow. 
 Nó sẽ đóng vai trò là "bộ não" điều khiển toàn bộ giao diện của bạn.
 '''
+import pandas as pd
+from pandas import DataFrame # import pandas để xử lý dữ liệu nếu cần thiết, ví dụ khi đọc file Excel hoặc CSV
+
+# Định nghĩa lớp PandasModel để chuyển DataFrame thành model cho QTableView
+from PySide6.QtCore import QAbstractTableModel, QModelIndex
+
+# Tạo một lớp PandasModel để chuyển DataFrame thành model cho QTableView, giúp hiển thị dữ liệu trong table view dễ dàng hơn
+class PandasModel(QAbstractTableModel):
+    def __init__(self, df: pd.DataFrame, parent=None):
+        super().__init__(parent)
+        self._df = df
+
+    def rowCount(self, parent=None):
+        return len(self._df.index)
+
+    def columnCount(self, parent=None):
+        return len(self._df.columns)
+
+    def data(self, index, role=Qt.DisplayRole):
+        if not index.isValid():
+            return None
+
+        if role == Qt.DisplayRole:
+            value = self._df.iloc[index.row(), index.column()]
+            return str(value)  # đảm bảo hiển thị dạng chuỗi
+
+        return None
+
+    def headerData(self, section, orientation, role=Qt.DisplayRole):
+        if role != Qt.DisplayRole:
+            return None
+
+        if orientation == Qt.Horizontal:
+            return str(self._df.columns[section])  # tên cột
+        else:
+            return str(self._df.index[section])  # index (nếu muốn hiện số thứ tự)
+
+
 class MainWindow(QMainWindow):
     send_text = Signal(list)
 #region---------------------Khoi Tao----------------------------
@@ -92,30 +130,28 @@ class MainWindow(QMainWindow):
     #--> Hàm nhận dữ liệu từ signal và lưu vào biến toàn cục
     def store_data(self, data):
             print(f'đã kết nối signal và nhận được dữ liệu: {data}') # In ra dữ liệu nhận được để kiểm tra
-            self.image_storage = data
+            self.image_storage = data[0] if data else data # Lưu dữ liệu vào biến toàn cục, nếu data rỗng thì gán một list rỗng để tránh lỗi
             print(f"Hệ thống đã nhận và lưu {len(self.image_storage)} ảnh vào kho.")
-            self.image_model.removeRows(0, self.ui.tableView_3.model().rowCount()) # Xóa dữ liệu cũ trong table view trước khi thêm dữ liệu mới
-            if len(data) == 1 and isinstance(data[0], list):
-                    data = data[0]
-            for path in data:
-                # Lấy số thứ tự hiện tại
-                current_row = self.image_model.rowCount()
-                col_path = QStandardItem(path)                   # Đường dẫn đầy đủ
-                # Đẩy dòng này vào model
-                self.image_model.appendRow([col_path])
-            # Tự động cuộn xuống dòng cuối cùng vừa thêm
-            self.ui.tableView_3.scrollToBottom()
-            header = self.ui.tableView_3.horizontalHeader()
-            #header.setSectionResizeMode(QHeaderView.ResizeToContents)
-
-            # Cột giãn đều
-            self.ui.tableView_3.horizontalHeader().setSectionResizeMode(QHeaderView.ResizeToContents)
-
-            # Đảm bảo có thanh cuộn dọc
-            self.ui.tableView_3.setVerticalScrollBarPolicy(Qt.ScrollBarAsNeeded)
-
-            # Nếu muốn dòng cao hơn một chút cho dễ nhìn
-            self.ui.tableView_3.verticalHeader().setDefaultSectionSize(30)
+            #self.image_model.removeRows(0, self.ui.tableView_3.model().rowCount()) # Xóa dữ liệu cũ trong table view trước khi thêm dữ liệu mới
+            model = self.ui.tableView_3.model() # Lấy model hiện tại của table view
+            empty_pd = pd.DataFrame() # Tạo một DataFrame rỗng để lưu dữ liệu tạm thời
+            self.ui.tableView_3.setModel(PandasModel(empty_pd)) # Đặt model tạm thời để xóa dữ liệu cũ
+            image_fr = pd.DataFrame(data, columns=["image_path"])
+            #image_fr = image_fr.reset_index() # Đặt lại tên cột index thành STT để hiển thị số thứ tự, cột image_path để hiển thị đường dẫn ảnh
+            print(image_fr) # In ra DataFrame chứa đường dẫn ảnh để kiểm tra xem đã được tạo đúng chưa
+            self.model = PandasModel(image_fr) # Tạo một model mới từ DataFrame chứa đường dẫn ảnh
+            self.ui.tableView_3.setModel(self.model) # Gán model mới vào table
+            font = QFont("Arial", 8) # Tạo một font mới với tên "Arial" và kích thước 10
+            self.ui.tableView_3.setFont(font) # Áp dụng font mới cho table view
+            self.ui.tableView_3.horizontalHeader().setStyleSheet(
+                "QHeaderView::section { font-size: 10pt; }"
+            )
+            self.ui.tableView_3.verticalHeader().setStyleSheet(
+                "QHeaderView::section { font-size: 10pt; }"
+            )
+            self.ui.tableView_3.setColumnWidth(0,200)
+            #self.ui.tableView_3.setColumnWidth(0,200)
+            self.ui.tableView_3.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
     #--> Hàm Load icon cho title của mainWindow
     def load_form_icon(self):
         strAbsPath = os.path.abspath(sys.argv[0])
