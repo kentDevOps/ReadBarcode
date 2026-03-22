@@ -136,7 +136,10 @@ class MainWindow(QMainWindow):
             model = self.ui.tableView_3.model() # Lấy model hiện tại của table view
             empty_pd = pd.DataFrame() # Tạo một DataFrame rỗng để lưu dữ liệu tạm thời
             self.ui.tableView_3.setModel(PandasModel(empty_pd)) # Đặt model tạm thời để xóa dữ liệu cũ
-            image_fr = pd.DataFrame(data, columns=["image_path"])
+            if len(data) > 0 and isinstance(data[0], list):
+                image_fr = pd.DataFrame(data[0], columns=["image_path"])
+            else:
+                image_fr = pd.DataFrame(data, columns=["image_path"])
             #image_fr = image_fr.reset_index() # Đặt lại tên cột index thành STT để hiển thị số thứ tự, cột image_path để hiển thị đường dẫn ảnh
             print(image_fr) # In ra DataFrame chứa đường dẫn ảnh để kiểm tra xem đã được tạo đúng chưa
             self.model = PandasModel(image_fr) # Tạo một model mới từ DataFrame chứa đường dẫn ảnh
